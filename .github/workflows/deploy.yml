@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Конфигурационный файл для развертывания нашего сайта
 
 on:
   release:
@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout code
+      - name: Проверка кода
         uses: actions/checkout@v2
 
-      - name: Deploy to GitHub Pages
+      - name: Развертывание сайта
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
